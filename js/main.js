@@ -93,6 +93,49 @@ if(continenteLowerCase === "eu"){
     alert("Lo siento, no agregaste una opción válida!")
 }
 
+// AGREGANDO CONCEPTOS DE LA SEGUNDA ENTREGA:
+// 1) CLASE CON CONSTRUCTOS Y OBJETOS
+// 2) ARRAY
+// 3) MÉTODO DE BUSQUEDA Y FILTRADO SOBRE EL ARRAY
+
+// 1)
+// creación de la clase Pasajero
+class Pasajero{
+    constructor(nombre, edad, nacionalidad, presupuesto){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.nacionalidad = nacionalidad;
+        this.presupuesto = presupuesto; // presupuesto mínimo del usuario en dolares para el viaje
+    }
+}
+
+// creación de los objetos de la clase Pasajero
+
+const persona1 = new Pasajero("Persona1", 10, "Mexicano", 1500);
+const persona2 = new Pasajero("Persona2", 45, "Argentino", 2500);
+const persona3 = new Pasajero("Persona3", 23, "Mexicano", 4000);
+const persona4 = new Pasajero("Persona4", 8, "Mexicano", 950);
+const persona5 = new Pasajero("Persona5", 65, "Italiano", 1350);
+
+// 2)
+// creación del array de pasajeros para una cotización de viaje para una familia de 5 personas
+const arrayPasajeros = [persona1, persona2, persona3, persona4, persona5];
+console.log("Ejemplo de familiares para un viaje");
+console.log(arrayPasajeros);
+
+// 3) 
+// Método de busqueda find
+const buscarPersona3 = arrayPasajeros.find(pasajero => pasajero.nombre === "Persona3");
+console.log("Busqueda ÚNICAMENTE del pasajero3");
+console.log(buscarPersona3);
+// Método de filtrado
+const arrayPasajeroPresupuestoMayor1500 = arrayPasajeros.filter(pasajero => pasajero.presupuesto > 1500);
+console.log("Filtado ÚNICAMENTE con presupuesto mayor a 1500 usd")
+console.log(arrayPasajeroPresupuestoMayor1500);
+
+console.log("Muestra de las 5 personas de la cotización del viaje")
+console.log(arrayPasajeros);
+
 // CASO DE PRUEBA:
 // EJEMPLO: para 3 personas en oceanía
 //
